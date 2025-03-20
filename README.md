@@ -9,7 +9,7 @@ This application extracts news articles related to a given company, performs sen
 * Simple Web UI (Streamlit)
 * Backend APIs (FastAPI)
 
-app.py: Streamlit UI for user interaction
-api.py: FastAPI backend for news & sentiment APIs
-utils.py: Helper functions (scraping, sentiment, TTS)
-README.txt: Project documentation
+* app.py: Streamlit UI for user interaction (Main file)
+* api.py: FastAPI backend for news & sentiment APIs
+* utils.py: Helper functions (scraping, sentiment, TTS)
+* README.txt: Project documentation
