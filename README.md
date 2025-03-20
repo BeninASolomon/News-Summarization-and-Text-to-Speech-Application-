@@ -4,6 +4,6 @@ This application extracts news articles related to a given company, performs sen
 
 * app.py: Streamlit UI for user interaction (Main file)
 * api.py: FastAPI backend for news & sentiment APIs
-* utils.py: Helper functions (scraping, sentiment, TTS)
+* utils.py: Helper functions (scraping, sentiment, Text To Speech)
 * README.md: Project documentation
 * requirements.txt: Necessary libraries
