@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from gtts import gTTS
+from deep_translator import GoogleTranslator
 def fetch_news(company_name):
     url = f"https://www.moneycontrol.com/news/tags/{company_name}.html"
     headers = {"User-Agent": "Mozilla/5.0"}   
@@ -31,10 +32,17 @@ def analyze_sentiment(text):
     else:
         sentiment = "Neutral"
     return {"score": score["compound"], "sentiment": sentiment}
+
+
+def translate_to_hindi(text):
+    return GoogleTranslator(source='auto', target='hi').translate(text)
+
 def generate_hindi_audio(text, output_file="output.mp3"):
-    tts = gTTS(text, lang="hi")
+    hindi_text = translate_to_hindi(text)  # First translate the text to Hindi
+    tts = gTTS(hindi_text, lang="hi")  # Convert translated text to speech
     tts.save(output_file)
     return output_file
+
 def compare_sentiments(news_articles):
     data = []
     for article in news_articles:
