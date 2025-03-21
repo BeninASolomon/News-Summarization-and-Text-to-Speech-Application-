@@ -10,6 +10,8 @@ This project is a News Summarization and Text-to-Speech (TTS) Application that e
 * Uses NLP techniques for automatic text summarization
 * Converts summarized text into speech using TTS
 * Provides a user-friendly interface for interaction
+* APIs enable interaction between frontend and backend
+* Deployed on Hugging Face Spaces for public access
 
 ## Dependencies
 
@@ -23,7 +25,7 @@ Required Libraries:
 * beautifulsoup4 - For web scraping (if applicable)
 * nltk - For natural language processing and summarization
 * gTTS - Google Text-to-Speech for audio conversion
-* flask (if web-based) - To create a simple web interface
+
 
 ## Installation & Setup
 
