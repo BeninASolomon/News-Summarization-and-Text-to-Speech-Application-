@@ -4,35 +4,28 @@
 
 This project is a News Summarization and Text-to-Speech (TTS) Application that extracts news articles, summarizes them using NLP techniques, and converts the summarized text into speech. The application is built using Python and leverages NLP libraries for text processing and TTS conversion.
 
-Features
+## Features
 
-Extracts news articles from URLs or text input
+* Extracts news articles from URLs or text input
+* Uses NLP techniques for automatic text summarization
+* Converts summarized text into speech using TTS
+* Provides a user-friendly interface for interaction
 
-Uses NLP techniques for automatic text summarization
-
-Converts summarized text into speech using TTS
-
-Provides a user-friendly interface for interaction
-
-Dependencies
+## Dependencies
 
 Ensure you have the following dependencies installed before running the application:
 
-pip install -r requirements.txt
+* pip install -r requirements.txt
 
 Required Libraries:
 
-requests - To fetch news articles from web sources
+* requests - To fetch news articles from web sources
+* beautifulsoup4 - For web scraping (if applicable)
+* nltk - For natural language processing and summarization
+* gTTS - Google Text-to-Speech for audio conversion
+* flask (if web-based) - To create a simple web interface
 
-beautifulsoup4 - For web scraping (if applicable)
-
-nltk - For natural language processing and summarization
-
-gTTS - Google Text-to-Speech for audio conversion
-
-flask (if web-based) - To create a simple web interface
-
-Installation & Setup
+## Installation & Setup
 
 Clone the Repository:
 
