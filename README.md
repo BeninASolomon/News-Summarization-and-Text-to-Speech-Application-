@@ -28,17 +28,14 @@ Required Libraries:
 ## Installation & Setup
 
 Clone the Repository:
-
-git clone https://github.com/BeninASolomon/News-Summarization-and-Text-to-Speech-Application.git
-cd News-Summarization-and-Text-to-Speech-Application
+* git clone https://github.com/BeninASolomon/News-Summarization-and-Text-to-Speech-Application.git
+* cd News-Summarization-and-Text-to-Speech-Application
 
 Install Dependencies:
-
-pip install -r requirements.txt
+* pip install -r requirements.txt
 
 Run the Application:
-
-python app.py
+* python app.py
 
 Folder
 * app.py: Streamlit UI for user interaction (Main file)
@@ -49,19 +46,13 @@ Folder
 
 Usage
 
-Input a news article URL or paste raw text
-
-Click on Summarize to generate a shorter version of the news
-
-Click on Convert to Speech to hear the summarized text
-
-Download the audio file for offline listening (if implemented)
+* Input a news article URL 
+* Click on Summarize to generate a shorter version of the news
+* Click on Convert to Speech to hear the summarized text
+* Download the audio file for offline listening (if implemented)
 
 
 Contributors
 
 Benin A. Solomon (@BeninASolomon)
 
-License
-
-This project is licensed under the MIT License.
