@@ -28,7 +28,7 @@ Required Libraries:
 ## Installation & Setup
 
 Clone the Repository:
-* git clone https://github.com/BeninASolomon/News-Summarization-and-Text-to-Speech-Application.git
+* git clone https://github.com/BeninASolomon/News-Summarization-and-Text-to-Speech-Application-.git
 * cd News-Summarization-and-Text-to-Speech-Application
 
 Install Dependencies:
