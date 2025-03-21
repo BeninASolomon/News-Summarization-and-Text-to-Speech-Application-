@@ -37,7 +37,24 @@ Install Dependencies:
 * pip install -r requirements.txt
 
 Run the Application:
-* python app.py
+* streamlit run app.py
+
+## API Development
+
+The application exposes APIs for:
+* News Extraction API - Fetches and summarizes news articles.
+* Sentiment Analysis API - Analyzes and categorizes sentiment.
+* TTS API - Converts summarized text into Hindi speech.
+
+## Deployment on Hugging Face Spaces
+
+The application is deployed on Hugging Face Spaces for public use. You can access it here:
+* [News Summarization and TTS App](https://huggingface.co/spaces/BeninASolomon/NewsSummarizationTTS)
+
+To deploy manually:
+* Create a Hugging Face Space
+* Select Python - Streamlit
+* Push code to the Hugging Face repository
 
 Folder
 * app.py: Streamlit UI for user interaction (Main file)
@@ -51,10 +68,9 @@ Usage
 * Input a news article URL 
 * Click on Summarize to generate a shorter version of the news
 * Click on Convert to Speech to hear the summarized text
-* Download the audio file for offline listening (if implemented)
 
 
 Contributors
 
-Benin A. Solomon (@BeninASolomon)
+Benin Solomon A (@BeninASolomon)
 
