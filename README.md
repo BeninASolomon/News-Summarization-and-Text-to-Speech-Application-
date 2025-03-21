@@ -1,6 +1,6 @@
-# News Summarization and Text-to-Speech Application
+## News Summarization and Text-to-Speech Application
 
-Overview
+#Overview
 
 This project is a News Summarization and Text-to-Speech (TTS) Application that extracts news articles, summarizes them using NLP techniques, and converts the summarized text into speech. The application is built using Python and leverages NLP libraries for text processing and TTS conversion.
 
