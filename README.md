@@ -7,7 +7,6 @@ This project is a News Summarization and Text-to-Speech (TTS) Application that e
 ## Features
 
 * Extracts news articles from URLs or text input
-* Uses NLP techniques for automatic text summarization
 * Converts summarized text into speech using TTS
 * Provides a user-friendly interface for interaction
 * APIs enable interaction between frontend and backend
