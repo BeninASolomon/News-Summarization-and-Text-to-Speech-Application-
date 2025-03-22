@@ -4,24 +4,22 @@ import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from gtts import gTTS
 from deep_translator import GoogleTranslator
+
 def fetch_news(company_name):
     url = f"https://www.moneycontrol.com/news/tags/{company_name}.html"
-    headers = {"User-Agent": "Mozilla/5.0"}   
+    headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(url, headers=headers)
-    if response.status_code != 200:
-        return {"error": "Failed to fetch news"}
     soup = BeautifulSoup(response.text, "html.parser")
-    articles = []
-    for article in soup.find_all("li", class_="clearfix")[:10]:  # Get top 10 articles
-        title = article.find("h2").text.strip()
-        summary = article.find("p").text.strip() if article.find("p") else "No summary available."
-        link = article.find("a")["href"]       
-        articles.append({
-            "title": title,
-            "summary": summary,
-            "url": link
-        })
+    news_items = soup.find_all("li", class_="clearfix")[:10]
+    articles = []    
+    for item in news_items:
+        title = item.find("h2").text.strip() if item.find("h2") else "No Title"
+        summary = item.find("p").text.strip() if item.find("p") else "No Summary"
+        link = item.find("a")["href"] if item.find("a") else "No Link"
+        date = item.find("span", class_="date").text.strip() if item.find("span", class_="date") else "No Date"
+        articles.append({"title": title, "summary": summary, "date": date, "url": link})
     return articles
+
 def analyze_sentiment(text):
     analyzer = SentimentIntensityAnalyzer()
     score = analyzer.polarity_scores(text)
@@ -38,8 +36,8 @@ def translate_to_hindi(text):
     return GoogleTranslator(source='auto', target='hi').translate(text)
 
 def generate_hindi_audio(text, output_file="output.mp3"):
-    hindi_text = translate_to_hindi(text)  # First translate the text to Hindi
-    tts = gTTS(hindi_text, lang="hi")  # Convert translated text to speech
+    hindi_text = translate_to_hindi(text)  
+    tts = gTTS(hindi_text, lang="hi")  
     tts.save(output_file)
     return output_file
 
@@ -54,3 +52,4 @@ def compare_sentiments(news_articles):
         })
     df = pd.DataFrame(data)
     return df.groupby("Sentiment")["Score"].count().to_dict()
+
