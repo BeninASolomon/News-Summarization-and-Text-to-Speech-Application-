@@ -31,7 +31,7 @@ Required Libraries:
 
 Clone the Repository:
 * git clone https://github.com/BeninASolomon/News-Summarization-and-Text-to-Speech-Application-.git
-* cd News-Summarization-and-Text-to-Speech-Application
+* cd News-Summarization-and-Text-to-Speech-Application-
 
 Install Dependencies:
 * pip install -r requirements.txt
